@@ -92,3 +92,18 @@ function calculate() {
     oparr = [];
     num = result.toString();
 }
+
+function play(){
+    var sound = document.getElementById('sound');
+    if(!sound.paused){
+        sound.pause();
+        sound.currentTime = 0; 
+    }
+    sound.play();
+}
+var btns = document.querySelectorAll("button");
+for (let btn of btns ){
+
+    btn.addEventListener('click', play );
+      
+}
